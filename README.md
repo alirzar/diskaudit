@@ -18,6 +18,12 @@ It needs only Python 3.9 or newer, with no other packages.
 
 **It never deletes anything.** The report lists commands; you decide what to run.
 
+![The top of a diskaudit report: volume usage, totals per cleanup tier, and a treemap of the home folder with flagged folders colored blue, orange or green](docs/screenshot-overview.png)
+
+![The cleanup plan: each item shows its path, why it can go, the space it frees and the command to run](docs/screenshot-plan.png)
+
+<sub>Screenshots of a report rendered from demo data with `docs/make_demo_report.py`.</sub>
+
 ## Install
 
 For yourself (no admin rights needed):
@@ -39,6 +45,10 @@ Other ways to install:
 | Into a shared lab folder | `./install.sh --prefix /path/to/lab/software` |
 | With pipx | `pipx install git+https://github.com/alirzar/diskaudit.git` |
 | Without installing | `python3 src/diskaudit.py` |
+
+To install a specific release instead of the latest code, clone with `--branch v1.0.0`, or use
+`pipx install git+https://github.com/alirzar/diskaudit.git@v1.0.0`. Releases are listed on the
+[releases page](https://github.com/alirzar/diskaudit/releases).
 
 To update, run `git pull` and then `./install.sh` again. To remove it, run
 `./install.sh --uninstall`, adding the same `--system` or `--prefix` you installed with.
@@ -111,6 +121,9 @@ python3 -m unittest discover -s tests -v
 
 The whole program is one file, `src/diskaudit.py`, using only the standard library. The
 report's HTML, CSS and JavaScript are embedded in it, so the report works offline.
+
+`python3 docs/make_demo_report.py` renders a report from made-up demo data into
+`docs/demo-report.html`, which is how the screenshots above were made.
 
 ## License
 

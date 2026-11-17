@@ -8,3 +8,5 @@ venv/
 # reports written by the tool itself
 disk-audit/
 diskaudit_*.html
+# demo report rendered by docs/make_demo_report.py
+docs/demo-report.html
