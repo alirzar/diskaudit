@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Disk Audit
+GenericName=Disk usage report
+Comment=Scan your home folder and open a treemap report with cleanup suggestions
+Exec=bash -c "'@BIN@'; echo; read -rp 'Done. Press Enter to close this window. '"
+Icon=drive-harddisk
+Terminal=true
+Categories=System;
+Keywords=disk;space;storage;cleanup;treemap;du;

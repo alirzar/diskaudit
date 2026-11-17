@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diskaudit"
+dynamic = ["version"]
+description = "See where the space on a Linux server goes and what you can safely delete: a treemap report with a verified cleanup plan."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ali Rezaei" }]
+keywords = ["disk usage", "treemap", "cleanup", "du", "windirstat", "storage"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Filesystems",
+]
+
+[project.scripts]
+diskaudit = "diskaudit:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["diskaudit"]
+
+[tool.setuptools.dynamic]
+version = { attr = "diskaudit.__version__" }

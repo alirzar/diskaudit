@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+# reports written by the tool itself
+disk-audit/
+diskaudit_*.html
